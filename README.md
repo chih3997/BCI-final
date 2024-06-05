@@ -19,6 +19,11 @@ This project focuses on Parkinson’s disease (PD). The main target is to distin
 
 ## II. Model Framwork
 
+![image](https://github.com/chih3997/BCI-final/assets/171775921/ce0569e3-c420-469b-ad4d-cc280fae1e6a)
+ 
+Figure 2. The placement of 32 electrodes [1]
+
+
 ## III. Validation
 
 ## IV. Usage
