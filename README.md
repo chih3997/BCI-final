@@ -26,13 +26,29 @@ Figure 1. The placement of 32 electrodes [1]
 
 ### ii. Feature Extraction
 
+### iii. Classification
+I use SVM to classify the data.
+Also, the classification is done in different cases. List as below.
+1. eyes-open resting EEG and on-medication PD vs HC 
+2. eyes-closed resting EEG and on-medication PD vs HC
+3. eyes-open resting EEG and off-medication cases PD vs HC
+4. eyes-closed resting EEG and off-medication cases PD vs HC
+5. eyes- open resting EEG off-medication cases PD vs on-medication PD
+6. eyes-closed resting EEG off-medication cases PD vs on-medication PD
+
+
+### iv.	Performance Evaluation
+In this project, the methods to evaluate the performance includes accuracy, precision, recall, and F1 score.
+
+![image](https://github.com/chih3997/BCI-final/assets/171775921/ef634a19-4151-4369-8eba-7814118eb657)  
+Figure 2. Method to evaluate performance
+
+
 
 ## III. Validation
 
 
-![image](https://github.com/chih3997/BCI-final/assets/171775921/ef634a19-4151-4369-8eba-7814118eb657)
 
-Figure 2. Method to evaluate performance
 
 
 ## IV. Usage
