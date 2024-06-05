@@ -26,6 +26,10 @@ Figure 1. The placement of 32 electrodes [1]
 
 ### ii. Feature Extraction
 
+For time domain features, calculate Renyi Entropy of the EEG segments from 10 channels, includes FP1, Fz, F3, Cz, C3, T7, Pz, P3, Oz, O1. Since from the reference research, I found out that most of the rest brain activity are symmetry. 
+
+For frequency domain features, perform FFT on data segments which are pre-filtered by the Hanning window and extract power from different frequency band, includes delta band (2 ~ 4 Hz), theta band (4 ~ 8 Hz), alpha band (8 ~ 13 Hz), beta band (13 ~ 30 Hz), and gamma band (30 ~ 45 Hz).
+
 ### iii. Classification
 I use SVM to classify the data.
 Also, the classification is done in different cases. List as below.
@@ -43,7 +47,6 @@ In this project, the methods to evaluate the performance includes accuracy, prec
 
 ![image](https://github.com/chih3997/BCI-final/assets/171775921/ef634a19-4151-4369-8eba-7814118eb657)  
 Figure 2. Method to evaluate performance
-
 
 
 ## IV. Usage
