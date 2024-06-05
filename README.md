@@ -19,7 +19,7 @@ This project focuses on Parkinson’s disease (PD). The main target is to distin
 
 ## II. Model Framwork
 ### i. Data Pre-processing
-First, redundant channels are removed from the dataset, leaving only 32 EEG channels. Second, re-reference all of the data to the common average and remove the mean of each channel. Then apply a band-pass filter with lower cut-off frequency at 1 Hz and higher cut-off frequency at 48 Hz to reduce low-frequency drift and high-frequency power line noise. I choose 48 Hz because I only need the data between 2 ~ 45 Hz and if I use 50 Hz there might be some power line noise remain. Third, remove eye movement and blink artifacts (especially on eyes-open cases) automatically by EEG artifact rejection toolbox -- artifact subspace reconstruction (ASR). Fourth, apply ICA on the dataset and only keep the components that are marked as “Brain” with probability larger than 75%
+First, redundant channels are removed from the dataset, leaving only 32 EEG channels and choose events that represent eyes-open stage (S1, S2) and eyes-closed stage (S3, S4). Second, re-reference all of the data to the common average and remove the mean of each channel. Then apply a band-pass filter with lower cut-off frequency at 1 Hz and higher cut-off frequency at 48 Hz to reduce low-frequency drift and high-frequency power line noise. I choose 48 Hz because I only need the data between 2 ~ 45 Hz and if I use 50 Hz there might be some power line noise remain. Third, remove eye movement and blink artifacts (especially on eyes-open cases) automatically by EEG artifact rejection toolbox -- artifact subspace reconstruction (ASR). Fourth, apply ICA on the dataset and only keep the components that are marked as “Brain” with probability larger than 75%.
 
 ![image](https://github.com/chih3997/BCI-final/assets/171775921/ce0569e3-c420-469b-ad4d-cc280fae1e6a)  
 Figure 1. The placement of 32 electrodes [1]
@@ -36,6 +36,14 @@ Figure 2. Method to evaluate performance
 
 
 ## IV. Usage
+
+Code in folder **matlab_code**
+
+1. data_preprocessing.m : pre-process the data.
+2. count_ics.m : help to count average number of ics label by ICLabel.
+3. cut_data_seg.m : cut data into 10 seconds segments.
+4. freq_analysis.m : 
+
 
 ## V. Result
 
