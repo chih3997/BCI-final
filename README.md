@@ -37,17 +37,12 @@ Also, the classification is done in different cases. List as below.
 6. eyes-closed resting EEG off-medication cases PD vs on-medication PD
 
 
-### iv.	Performance Evaluation
+## III. Validation
+
 In this project, the methods to evaluate the performance includes accuracy, precision, recall, and F1 score.
 
 ![image](https://github.com/chih3997/BCI-final/assets/171775921/ef634a19-4151-4369-8eba-7814118eb657)  
 Figure 2. Method to evaluate performance
-
-
-
-## III. Validation
-
-
 
 
 
