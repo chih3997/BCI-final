@@ -49,7 +49,7 @@ Code in folder **matlab_code**
 
 Python code
 
-**SVM_classifier.ipynb** : SVM classifier to classify PD and HC.
+1. **SVM_classifier.ipynb** : SVM classifier to classify PD and HC.
 
 ## V. Result
 
