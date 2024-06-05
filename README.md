@@ -39,11 +39,17 @@ Figure 2. Method to evaluate performance
 
 Code in folder **matlab_code**
 
-1. data_preprocessing.m : pre-process the data.
-2. count_ics.m : help to count average number of ics label by ICLabel.
-3. cut_data_seg.m : cut data into 10 seconds segments.
-4. freq_analysis.m : 
+1. **data_preprocessing.m** : pre-process the data.
+2. **count_ics.m** : help to count average number of ics label by ICLabel.
+3. **cut_data_seg.m** : cut data into 10 seconds segments.
+4. **freq_analysis.m** : applying fft to extract frequency domain power spectral.
+5. **freq_band_power.m** : extract power spectral from each frequency band.
+6. **feature_output.m** : output all feature to a csv file.
+7. **participants.m** : classify participants from their ID.
 
+Python code
+
+**SVM_classifier.ipynb** : SVM classifier to classify PD and HC.
 
 ## V. Result
 
