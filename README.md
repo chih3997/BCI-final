@@ -71,9 +71,14 @@ Code in folder **python_code**
 
 ## V. Result
 
-I define PD as Positive groups, HC as negative groups.
+I define PD as Positive groups, HC as negative groups. 
+
+SVM
 
 ![image](https://github.com/chih3997/BCI-final/assets/171775921/3244223f-0ce1-4ceb-8aff-5b0975fc0ce0)
+
+KNN
+
 
 
 ## VI. Reference
