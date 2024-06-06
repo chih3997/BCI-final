@@ -64,7 +64,7 @@ Code in folder **matlab_code**
 6. **feature_output.m** : output all feature to a csv file.
 7. **participants.m** : classify participants from their ID.
 
-Python code
+Code in folder **python_code**
 
 1. **SVM_classifier.ipynb** : SVM classifier to classify PD and HC.
 2. **KNN_classifier.ipynb** : KNN classifier to classify PD and HC.
