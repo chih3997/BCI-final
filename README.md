@@ -73,14 +73,11 @@ Code in folder **python_code**
 
 I define PD as Positive groups, HC as negative groups when comparing PD and HC, and define off-PD as Positive groups, on-PD as negative groups when comparing on-PD and off-PD. KNN shows better performance on classification and both eyes-open and eyes-closed resting EEG can be used to distinguish PD and HC.
 
-SVM
+![image](https://github.com/chih3997/BCI-final/assets/171775921/470c380e-32fa-43d1-a031-c4c636de0dfc)  
+Figure 4. SVM performance result
 
-![image](https://github.com/chih3997/BCI-final/assets/171775921/470c380e-32fa-43d1-a031-c4c636de0dfc)
-
-
-KNN
-
-![image](https://github.com/chih3997/BCI-final/assets/171775921/3cc21a36-131c-4084-8cc2-7b3a2be1fc0f)
+![image](https://github.com/chih3997/BCI-final/assets/171775921/3cc21a36-131c-4084-8cc2-7b3a2be1fc0f)  
+Figure 5. KNN performance result
 
 
 ## VI. Reference
