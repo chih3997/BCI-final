@@ -35,7 +35,7 @@ For time domain features, calculate Renyi Entropy of the EEG segments from 10 ch
 For frequency domain features, perform FFT on data segments which are pre-filtered by the Hanning window and extract power from different frequency band, includes delta band (2 ~ 4 Hz), theta band (4 ~ 8 Hz), alpha band (8 ~ 13 Hz), beta band (13 ~ 30 Hz), and gamma band (30 ~ 45 Hz).
 
 ### iii. Classification
-I use SVM to classify the data. The classification is done in different cases. List as below.
+I use SVM and KNN to classify the data. The classification is done in different cases. List as below.
 1. eyes-open resting EEG and on-medication PD vs HC 
 2. eyes-closed resting EEG and on-medication PD vs HC
 3. eyes-open resting EEG and off-medication cases PD vs HC
@@ -67,6 +67,7 @@ Code in folder **matlab_code**
 Python code
 
 1. **SVM_classifier.ipynb** : SVM classifier to classify PD and HC.
+2. **KNN_classifier.ipynb** : KNN classifier to classify PD and HC.
 
 ## V. Result
 
