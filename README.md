@@ -17,10 +17,10 @@ Paper [1] and [6] also use this dataset to train or test their classification mo
 ## I.	Introduction
 This project focuses on Parkinson’s disease (PD). The main target is to distinguish PD patients from healthy control (HC) group using resting state electroencephalography (EEG) signal. The PD resting EEG data is recorded in four cases: eyes-open resting EEG / eyes-closed resting EEG and on-medication cases / off-medication cases. The features used in this project are power spectral and entropy. Power spectral are extracted from different frequency bands, includes delta band (2 ~ 4 Hz), theta band (4 ~ 8 Hz), alpha band (8 ~ 13 Hz), beta band (13 ~ 30 Hz), and gamma band (30 ~ 45 Hz). 
 
-## II. Model Framwork
+## II. Model Framework
 
 ![image](https://github.com/chih3997/BCI-final/assets/171775921/29b782b6-0295-418d-a3ca-f9eac89218bc)
-Figure 1. Model framwork
+Figure 1. Model framework
 
 ### i. Data Pre-processing
 1. Redundant channels are removed from the dataset, leaving only 32 EEG channels.
