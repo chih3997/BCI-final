@@ -23,16 +23,23 @@ This project focuses on Parkinson’s disease (PD). The main target is to distin
 Figure 1. Model framwork
 
 ### i. Data Pre-processing
-First, redundant channels are removed from the dataset, leaving only 32 EEG channels and choose events that represent eyes-open stage (S1, S2) and eyes-closed stage (S3, S4). Second, re-reference all of the data to the common average and remove the mean of each channel. Then apply a band-pass filter with lower cut-off frequency at 1 Hz and higher cut-off frequency at 48 Hz to reduce low-frequency drift and high-frequency power line noise. I choose 48 Hz because I only need the data between 2 ~ 45 Hz and if I use 50 Hz there might be some power line noise remain. Third, remove eye movement and blink artifacts (especially on eyes-open cases) automatically by EEG artifact rejection toolbox -- artifact subspace reconstruction (ASR). Fourth, apply ICA on the dataset and only keep the components that are marked as “Brain” with probability larger than 75%. Final, devide data into 10 seconds data segments.
+1. Redundant channels are removed from the dataset, leaving only 32 EEG channels and choose events that represent eyes-open stage (S1, S2) and eyes-closed stage (S3, S4).
+2. Re-reference all of the data to the common average and remove the mean of each channel.
+3. Apply a band-pass filter with lower cut-off frequency at 1 Hz and higher cut-off frequency at 48 Hz to reduce low-frequency drift and high-frequency power line noise. I choose 48 Hz because I only need the data between 2 ~ 45 Hz and if I use 50 Hz there might be some power line noise remain. 
+4. Remove eye movement and blink artifacts (especially on eyes-open cases) automatically by EEG artifact rejection toolbox -- artifact subspace reconstruction (ASR).
+5. Apply ICA on the dataset and only keep the components that are marked as “Brain” with probability larger than 75%.
+6. Divide data into 10 seconds data segments.
 
 ![image](https://github.com/chih3997/BCI-final/assets/171775921/ce0569e3-c420-469b-ad4d-cc280fae1e6a)  
 Figure 2. The placement of 32 electrodes [1]
 
 ### ii. Feature Extraction
 
-For time domain features, calculate Renyi Entropy of the EEG segments from 10 channels, includes FP1, Fz, F3, Cz, C3, T7, Pz, P3, Oz, O1. Since from the reference research, I found out that most of the rest brain activity are symmetry, and SVM is not good at dealing with large number of features.
+Since SVM and KNN are not good at handling large number of feature, to reduce number of feature, I divide the brain into 5 region: Frontal, Central, Parietal, Temporal, and Occipital, as indicated in Figure 2. The feature will be extracted based on the brain region. There are total 30 features, 5 for time domain and 25 for frequency domain.
 
-For frequency domain features, perform FFT on data segments which are pre-filtered by the Hanning window and extract power from different frequency band, includes delta band (2 ~ 4 Hz), theta band (4 ~ 8 Hz), alpha band (8 ~ 13 Hz), beta band (13 ~ 30 Hz), and gamma band (30 ~ 45 Hz).
+For time domain features, calculate mean Renyi Entropy of the EEG segments of 5 brain regions.
+
+For frequency domain features, perform FFT on data segments which are pre-filtered by the Hanning window and extract mean power from different frequency band of 5 brain regions, includes delta band (2 ~ 4 Hz), theta band (4 ~ 8 Hz), alpha band (8 ~ 13 Hz), beta band (13 ~ 30 Hz), and gamma band (30 ~ 45 Hz).
 
 ### iii. Classification
 I use SVM and KNN to classify the data. The classification is done in different cases. List as below.
