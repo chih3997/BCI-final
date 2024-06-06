@@ -18,11 +18,15 @@ Paper [1] and [6] also use this dataset to train or test their classification mo
 This project focuses on Parkinson’s disease (PD). The main target is to distinguish PD patients from healthy control (HC) group using resting state electroencephalography (EEG) signal. The PD resting EEG data is recorded in four cases: eyes-open resting EEG / eyes-closed resting EEG and on-medication cases / off-medication cases. The features used in this project are power spectral and entropy. Power spectral are extracted from different frequency bands, includes delta band (2 ~ 4 Hz), theta band (4 ~ 8 Hz), alpha band (8 ~ 13 Hz), beta band (13 ~ 30 Hz), and gamma band (30 ~ 45 Hz). 
 
 ## II. Model Framwork
+
+![image](https://github.com/chih3997/BCI-final/assets/171775921/29b782b6-0295-418d-a3ca-f9eac89218bc)
+Figure 1. Model framwork
+
 ### i. Data Pre-processing
 First, redundant channels are removed from the dataset, leaving only 32 EEG channels and choose events that represent eyes-open stage (S1, S2) and eyes-closed stage (S3, S4). Second, re-reference all of the data to the common average and remove the mean of each channel. Then apply a band-pass filter with lower cut-off frequency at 1 Hz and higher cut-off frequency at 48 Hz to reduce low-frequency drift and high-frequency power line noise. I choose 48 Hz because I only need the data between 2 ~ 45 Hz and if I use 50 Hz there might be some power line noise remain. Third, remove eye movement and blink artifacts (especially on eyes-open cases) automatically by EEG artifact rejection toolbox -- artifact subspace reconstruction (ASR). Fourth, apply ICA on the dataset and only keep the components that are marked as “Brain” with probability larger than 75%. Final, devide data into 10 seconds data segments.
 
 ![image](https://github.com/chih3997/BCI-final/assets/171775921/ce0569e3-c420-469b-ad4d-cc280fae1e6a)  
-Figure 1. The placement of 32 electrodes [1]
+Figure 2. The placement of 32 electrodes [1]
 
 ### ii. Feature Extraction
 
@@ -45,7 +49,7 @@ I use SVM to classify the data. The classification is done in different cases. L
 In this project, the methods to evaluate the performance includes accuracy, precision, recall, and F1 score.
 
 ![image](https://github.com/chih3997/BCI-final/assets/171775921/ef634a19-4151-4369-8eba-7814118eb657)  
-Figure 2. Method to evaluate performance
+Figure 3. Method to evaluate performance
 
 
 ## IV. Usage
