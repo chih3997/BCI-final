@@ -36,11 +36,11 @@ Figure 2. The placement of 32 electrodes [1]
 
 ### ii. Feature Extraction
 
-Since SVM and KNN are not good at handling large number of feature, to reduce number of feature, I divide the brain into 5 region: Frontal, Central, Parietal, Temporal, and Occipital, as indicated in Figure 2. The feature will be extracted based on the brain region. There are total 30 features, 5 for time domain and 25 for frequency domain.
+Since SVM and KNN are not good at handling large number of feature input, to reduce number of feature, divide the brain into 5 regions: Frontal, Central, Parietal, Temporal, and Occipital, as indicated in Figure 2. The feature will be extracted based on the brain region. There are total 30 features, 5 for time domain and 25 for frequency domain.
 
 For time domain features, calculate mean Renyi Entropy of the EEG segments of 5 brain regions.
 
-For frequency domain features, perform FFT on data segments which are pre-filtered by the Hanning window and extract mean power from different frequency band of 5 brain regions, includes delta band (2 ~ 4 Hz), theta band (4 ~ 8 Hz), alpha band (8 ~ 13 Hz), beta band (13 ~ 30 Hz), and gamma band (30 ~ 45 Hz).
+For frequency domain features, perform FFT on data segments which are pre-filtered by the Hanning window. Then, calculate mean power of each region and mean power of whole brain. Next, calculate power of each region in different frequency band, includes delta band (2 ~ 4 Hz), theta band (4 ~ 8 Hz), alpha band (8 ~ 13 Hz), beta band (13 ~ 30 Hz), gamma band (30 ~ 45 Hz) and total power of whole brain in all frequency band (2 ~ 45 Hz). Finally, the band power are divided by the total power to obtain the relative band power of each individual.  
 
 ### iii. Classification
 I use SVM and KNN to classify the data. The classification is done in different cases. List as below.
