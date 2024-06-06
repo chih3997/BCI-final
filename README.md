@@ -79,7 +79,7 @@ Code in folder **python_code**
 
 ## V. Result
 
-I define PD as Positive groups, HC as negative groups when comparing PD and HC, and define off-PD as Positive groups, on-PD as negative groups when comparing on-PD and off-PD. KNN shows better performance on classification and both eyes-open and eyes-closed resting EEG can be used to distinguish PD and HC.
+I define PD as positive groups, HC as negative groups when comparing PD and HC, and define off-PD as positive groups, on-PD as negative groups when comparing on-PD and off-PD. KNN shows better performance on classification and both eyes-open and eyes-closed resting EEG can be used to distinguish PD and HC.
 
 ![image](https://github.com/chih3997/BCI-final/assets/171775921/470c380e-32fa-43d1-a031-c4c636de0dfc)  
 Figure 4. SVM performance result
